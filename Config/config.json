@@ -1,0 +1,10 @@
+{
+    "mysql": {
+        "host"     : "203.205.33.59",
+        "port": "3306",
+        "user"     : "quanlyit",
+        "password" : "Thanhlam123",
+        "database" : "quanlyit",
+        "connectionLimit" : 10
+    }
+}

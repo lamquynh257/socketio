@@ -1,0 +1,147 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="/admin" class="brand-link">
+    <img src="../../public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      style="opacity: .8">
+    <span class="brand-text font-weight-light">Admin</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="../../public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Nguyễn Thành Lâm</a>
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a id="thtb" href="#" class="nav-link">
+            <i class="nav-icon fas fa-desktop"></i>
+            <p>
+              Tổng hợp Thiết bị
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">3</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="/devices" class="nav-link">
+                <i class="nav-icon fas fa-wifi"></i>
+                <p>Router/Switch</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <!-- <a href="/admin/device.php" class="nav-link">-->
+              <a href="?controller=thietbi" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>PC/Laptop</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="?controller=account" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Quản lý tài khoản</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item menu-is-opening menu-open">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              DB Web NTTU
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">1</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="?controller=nttu" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Test</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item menu-is-opening menu-open">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas  fa-sticky-note"></i>
+            <p>
+              Quản lý văn bản
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">1</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <!--<a href="/admin/totrinh.php" class="nav-link">-->
+              <a href="?controller=vanban" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tờ trình</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <!--<a href="/admin/totrinh.php" class="nav-link">-->
+              <a href="?controller=bangiaothietbi" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Bàn giao thiết bị</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="?controller=vat" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>VAT</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item menu-is-opening menu-open">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Cá nhân
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">1</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <!--<a href="/admin/totrinh.php" class="nav-link">-->
+              <a href="?controller=calendar" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lịch làm việc</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

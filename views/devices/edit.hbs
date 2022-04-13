@@ -1,0 +1,70 @@
+<!--#########################################################################################################-->
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard v2</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v2</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <h3 class="card1-title">Danh sách thiết bị</h3>
+        <!--<a type="button" class="btn-them btn btn-primary btn-flat btn-sm" data-toggle="modal" data-target="#themthietbi">Thêm mới</a>-->
+        <a name="" id="" class="btn btn-primary" href="device/add" role="button"><i class="fa fa-plus"
+            aria-hidden="true"></i> Test thử</a>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        {{#each data}}
+        <form method="POST" action="">
+          <label>Cơ sở:</label><br></br>
+          <select name="location" class="form-control select2 select2-hidden-accessible"
+            aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="Q9">Q9</option>
+            <option value="300">300</option>
+            <option value="298">298</option>
+          </select>
+          <p></p>
+          <!--<input type="text" name="CoSo" class="form-control" required>-->
+          <label>Tên thiết bị:</label>
+          <input type="text" name="device_name" class="form-control" value="{{device_name}}" required>
+          <label>URL:</label>
+          <input type="text" name="url" class="form-control"  value="{{url}}" required>
+          <label>User:</label>
+          <input type="text" name="user" class="form-control" value="{{user}}" required>
+          <label>Password:</label>
+          <input type="text" name="password" class="form-control" value="{{password}}" required>
+          <label>Firmware:</label>
+          <input type="file" name="firmware" class="form-control">
+      </div>
+      <div class="modal-footer">
+        <a name="" id="" class="btn btn-primary" href="/" role="button"><i class="fa fa-backward"
+            aria-hidden="true"></i></a>
+        <input class="btn btn-primary" type="submit" value="Sửa">
+      </div>
+    </div>
+    </form>
+    {{/each}}
+</div>
+<!-- /.card-body -->
+</div>
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
