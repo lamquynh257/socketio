@@ -1,25 +1,16 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const myconnection = require('express-myconnection');
-const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const config = require('./Config/config.json');
 const deviceRoute = require('./routes/device.route');
 const accountRoute = require('./routes/account.route');
 const db = require('./Config/db');
-const auth = require('./middleware/auth');
-const cors = require("cors");
 const app = express();
-app.use(cors());
 const delay = require('delay');
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-
-//app.use(bodyParser.urlencoded({
-//  extended: true
-//}));
-//app.use(bodyParser.json());
 app.use(express.urlencoded({
   extended: true
 }));
@@ -39,12 +30,12 @@ app.use(myconnection(mysql, config.mysql, 'single'));
 
 io.on("connection", function (socket) {
 
-  console.log("Co nguoi ket noi:" + socket.id);
+  //console.log("Co nguoi ket noi:" + socket.id);
   // io.sockets.emit("data-server", io.engine.clientsCount);
   socket.on("disconnect", function () {
-    console.log(socket.id + " ngat ket noi!!!!! " + "Số connection còn lại: " + io.engine.clientsCount);
+    //console.log(socket.id + " ngat ket noi!!!!! " + "Số connection còn lại: " + io.engine.clientsCount);
   });
-  console.log("Connection: " + io.engine.clientsCount);
+ // console.log("Connection: " + io.engine.clientsCount);
 
 });
 
@@ -52,6 +43,12 @@ app.get('/', (req, res) => {
   res.render('account/index', {
     layout: false
   });
+});
+app.get('/iframe', (req, res) => {
+  res.render('iframe');
+});
+app.get('/trangchu', (req, res) => {
+  res.render('default');
 });
 
 app.use('/account', accountRoute);

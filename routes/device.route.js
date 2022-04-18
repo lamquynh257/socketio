@@ -4,7 +4,7 @@ const  auth = require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/',auth.requiredtoken, deviceController.index);
+router.get('/', deviceController.index);
 router.get('/add', deviceController.create);
 router.post('/add', deviceController.store);
 router.post('/delete', deviceController.destroy);

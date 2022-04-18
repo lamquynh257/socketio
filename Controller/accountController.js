@@ -37,8 +37,9 @@ module.exports.signup = async (req, res) => {
 // login
 module.exports.login = (req, res) => {
     console.log(req.body, "login");
+    
     let email = req.body.email;
-    console.log(req.body.email, "mail");
+    //console.log(req.body.email, "mail");
     let password = req.body.password;
   
     // checkemailid
@@ -53,9 +54,9 @@ module.exports.login = (req, res) => {
         };
         //    check password
         let chkpwd = await bcrypt.compare(password, result[0].password);
-        console.log(chkpwd, "chkpwd##");
+        //console.log(chkpwd, "chkpwd##");
         if (chkpwd === true) {
-            const token = jwt.sign({ data }, process.env.ACCESS_TOKEN_SECRET);
+            const token = jwt.sign({ data }, process.env.ACCESS_TOKEN_SECRET,{expiresIn: "5s"});
           console.log(token, "token###");
           //res.send({
            // status: true,
@@ -63,7 +64,7 @@ module.exports.login = (req, res) => {
            // result: data,
            // msg: "user login successful",
          // });
-          res.redirect('/devices');
+          res.redirect('/trangchu');
         } else {
           res.send({
             status: false,
@@ -91,3 +92,4 @@ function verifyToken(token) {
       }
     });
   }
+
